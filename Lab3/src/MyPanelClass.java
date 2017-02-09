@@ -25,34 +25,31 @@ public class MyPanelClass extends JPanel{
         int height = y2 - y1;
 
         //Paint the background
-        g.setColor(Color.GREEN);
-        g.fillRect(x1, y1, width + 1, height + 1);
-        /*g.setColor(Color.YELLOW);
-        g.drawRect(x1, y1, width , height );
-        g.setColor(Color.PINK);
-        g.drawRect(x1 + 20, y1 + 20, width - 40, height - 40);
         g.setColor(Color.WHITE);
+        g.fillRect(x1, y1, width + 1, height + 1);
+        g.setColor(Color.RED);
+        g.fillRect(x1, y1, width , height/5 );
+        g.fillRect(x1, y1 +2*height/5 , width, height/5);
+        g.fillRect(x1, y1 +4*height/5 , width, height/5);
+        /*  g.setColor(Color.WHITE);
         g.drawLine(x1, y1, x2, y2);
         g.setColor(Color.BLUE);
         g.drawLine(x1, y2, x2, y1);
-        */
+        
         //
         //g.setColor(Color.LIGHT_GRAY);
         //g.fillOval(width/2-22 , height/2-22, 55, 55);
-        
-     /*   Polygon p = new Polygon();
-        p.addPoint(x1 + 5, y1 + 25);
-        p.addPoint(x1 + 20, y1 + 10);
-        p.addPoint(x1 + 35, y1 + 25);
-        p.addPoint(x1 + 25, y1 + 25);
-        p.addPoint(x1 + 25, y1 + 45);
-        p.addPoint(x1 + 15, y1 + 45);
-        p.addPoint(x1 + 15, y1 + 25);
-        g.setColor(Color.YELLOW);
-        g.fillPolygon(p);*/
-        
+*/
+        Polygon p = new Polygon();
+        p.addPoint(x1, y1 );
+        p.addPoint(width/2, height/2);
+        p.addPoint(x1, height);
+
+        g.setColor(Color.BLUE);
+        g.fillPolygon(p);
+        //125*height/200
         Polygon p2 = new Polygon();
-        p2.addPoint(x1 + 25, y1 + 73);
+        p2.addPoint(width/10, 92*height/200);
         p2.addPoint(x1 + 41, y1 + 73);
         p2.addPoint(x1 + 47, y1 + 58);
         p2.addPoint(x1 + 53, y1 + 73);
@@ -63,7 +60,7 @@ public class MyPanelClass extends JPanel{
         p2.addPoint(x1 + 34, y1 + 98);
         p2.addPoint(x1 + 38, y1 + 83);
         g.setColor(Color.WHITE);
-        g.drawPolygon(p2);
+        g.fillPolygon(p2);
 }
 
 }
